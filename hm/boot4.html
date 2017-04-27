@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap 实例 - 排版</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<h2>主标题</h2>
+			<p class="lead">添加 class="lead"，这将得到更大更粗、行高更高的文本</p>
+			<p class="text-left">添加class="text-left"，文本左对齐</p>
+			<p class="text-center">添加class="text-center"，文本居中对齐</p>
+			<p class="text-right">添加class="text-right"，文本右对齐</p>
+			<p class="text-muted">添加class="text-muted"，本行内容时减弱的</p>
+			<p class="text-primary">添加class="text-primary"，本行内容带有一个 primary class</p>
+			<p class="text-success">添加class="text-success"，本行内容带有一个 success class</p>
+			<p class="text-info">添加class="text-info"，本行内容带有一个 info class</p>
+			<p class="text-warning">添加class="text-warning"，本行内容带有一个 warning class</p>
+			<p class="text-danger">添加class="text-danger"，本行内容带有一个 danger class</p>
+			<!--缩写-->
+			<!--
+				<abbr> 元素的样式为显示在文本底部的一条虚线边框，
+					当鼠标悬停在上面时会显示完整的文本（只要您为 <abbr> title 属性添加了文本）。
+						为了得到一个更小字体的文本，请添加 .initialism 到 <abbr>。
+			-->
+			<abbr title="Garyhu">G</abbr><br />
+			<abbr title="JavaScript" class="initialism">JS</abbr>
+
+			<!--
+				引用（Blockquote）
+			-->
+			<blockquote>
+				<p>
+					这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。
+				</p>
+			</blockquote>
+			<blockquote>
+				<small>这段文本的引用<cite title="JavaScript">资源</cite></small>
+			</blockquote>
+			<blockquote class="pull-right">
+				<small>这段文本向右对齐</small>
+			</blockquote>
+			
+			<!--
+				支持列表ol、ul、(dl、dt、dd)
+			-->
+			<ol>
+				<li>我是有序列表1</li>
+				<li>我是有序列表2</li>
+				<li>我是有序列表3</li>
+				<li>我是有序列表4</li>
+			</ol>
+			<ul class="list-unstyled">
+				<!--使用 class .list-unstyled 来移除样式-->
+				<li>我是无序列表1</li>
+				<li>我是无序列表2</li>
+				<li>我是无序列表3</li>
+				<li>我是无序列表4</li>
+			</ul>
+			<ul class="list-inline">
+				<!--使用 class .list-inline 把所有的列表项放在同一行中-->
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>Item 3</li>
+				<li>Item 4</li>
+			</ul>
+			
+			<dl>
+				<dt>Description</dt>
+				<dd>Item1</dd>
+				<dt>Description</dt>
+				<dd>Item2</dd>
+			</dl>
+			
+			<dl class="dl-horizontal">
+				<!--使用 class dl-horizontal 把 <dl> 行中的属于与描述并排显示-->
+				<dt>描述</dt>
+				<dd>案例1</dd>
+				<dt>描述</dt>
+				<dd>案例2</dd>
+			</dl>
+		</div>
+	</body>
+	<script>
+		/*
+		 *  Bootstrap 更多排版类:
+		      .lead	使段落突出显示	
+              .small	设定小文本 (设置为父文本的 85% 大小)	
+              .text-left	设定文本左对齐	
+              .text-center	设定文本居中对齐	
+              .text-right	设定文本右对齐	
+              .text-justify	设定文本对齐,段落中超出屏幕部分文字自动换行	
+              .text-nowrap	段落中超出屏幕部分不换行	
+              .text-lowercase	设定文本小写	
+              .text-uppercase	设定文本大写	
+              .text-capitalize	设定单词首字母大写	
+              .initialism	显示在 <abbr> 元素中的文本以小号字体展示，且可以将小写字母转换为大写字母	
+              .blockquote-reverse	设定引用右对齐	
+              .list-unstyled	移除默认的列表样式，列表项中左对齐 ( <ul> 和 <ol> 中)。 
+                                                                                这个类仅适用于直接子列表项 (如果需要移除嵌套的列表项，你需要在嵌套的列表中使用该样式)
+              .list-inline	将所有列表项放置同一行	
+              .dl-horizontal	该类设置了浮动和偏移，应用于 <dl> 元素和 <dt> 元素中，具体实现可以查看实例	
+              .pre-scrollable	使 <pre> 元素可滚动 scrollable
+		 */
+	</script>
+
+</html>
