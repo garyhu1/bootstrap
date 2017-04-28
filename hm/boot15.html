@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap 实例 - 导航栏</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<!--
+				默认的导航栏:
+				 1、向 <nav> 标签添加 class .navbar、.navbar-default。
+                 2、向上面的元素添加 role="navigation"，有助于增加可访问性。
+                 3、向 <div> 元素添加一个标题 class .navbar-header，
+                                                 内部包含了带有 class navbar-brand 的 <a> 元素。
+                                                 这会让文本看起来更大一号。
+                 4、为了向导航栏添加链接，只需要简单地添加带有 class .nav、.navbar-nav 的无序列表即可。
+			-->
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">默认导航栏</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="#">PHP</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							JavaScript
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#">HTML</a>
+							</li>
+							<li>
+								<a href="#">Bootstrap</a>
+							</li>
+							<li>
+								<a href="#">JqueryJs</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">AngularJs</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">CSS</a>
+					</li>
+				</ul>
+			</nav>
+			<br /><br /><br />
+
+			<!--
+				导航栏中的表单:
+				     它是使用 .navbar-form class。
+				     这确保了表单适当的垂直对齐和在较窄的视口中折叠的行为。
+				     使用对齐方式选项（这将在组件对齐方式部分进行详细讲解）
+				     来决定导航栏中的内容放置在哪里。
+			-->
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a href=":;" class="navbar-brand">导航栏中的表单</a>
+					</div>
+					<form class="navbar-form navbar-left" role="seacher">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="请输入搜索内容" />
+						</div>
+						<button type="submit" class="btn btn-success">
+							提交
+						</button>
+					</form>
+					<!--
+						导航栏中的按钮：
+						  可以使用 class .navbar-btn 
+						  向不在 <form> 中的 <button> 元素添加按钮，按钮在导航栏上垂直居中。
+						 .navbar-btn 可被使用在 <a> 和 <input> 元素上。
+						【注】：
+					                     不要在 .navbar-nav 内的 <a> 元素上使用 .navbar-btn，
+						           因为它不是标准的 button class
+					-->
+					<button type="button" class="btn btn-warning navbar-btn">导航栏中按钮</button>
+				</div>
+			</nav>
+			<br /><br /><br />
+
+			<!--
+				导航栏中的文本:
+				      如果需要在导航中包含文本字符串，
+				     请使用 class .navbar-text。这通常与 <p> 标签一起使用，
+				     确保适当的前导和颜色
+			-->
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<a href=":;" class="navbar-brand">导航栏的文本</a>
+				</div>
+				<div>
+					<p class="navbar-text">我现在添加一个文本到导航栏中</p>
+				</div>
+			</nav>
+			<br /><br /><br />
+
+			<!--
+				结合图标的导航链接：
+				       如果您想在常规的导航栏导航组件内使用图标，
+				       那么请使用 class glyphicon glyphicon-* 来设置图标
+			-->
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a href="#" class="navbar-brand">设置图标</a>
+					</div>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#"><span class="glyphicon glyphicon-user"></span>注册</a>
+						</li>
+						<li>
+							<a href="#"><span class="glyphicon glyphicon-log-in"></span>登录</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<br /><br /><br />
+
+			<!--、
+				可以使用实用工具 class .navbar-left 或 .navbar-right 
+				向左或向右对齐导航栏中的 导航链接、表单、按钮或文本 这些组件。
+				这两个 class 都会在指定的方向上添加 CSS 浮动。
+			-->
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">菜鸟教程</a>
+					</div>
+					<div>
+						<!--向左对齐-->
+						<ul class="nav navbar-nav navbar-left">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									Java
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">jmeter</a>
+									</li>
+									<li>
+										<a href="#">EJB</a>
+									</li>
+									<li>
+										<a href="#">Jasper Report</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a href="#">分离的链接</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a href="#">另一个分离的链接</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<form class="navbar-form navbar-left" role="search">
+							<button type="submit" class="btn btn-default">
+                                                                                     向左对齐-提交按钮
+                            </button>
+						</form>
+						<p class="navbar-text navbar-left">向左对齐-文本</p>
+						<!--向右对齐-->
+						<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									Java <b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">jmeter</a>
+									</li>
+									<li>
+										<a href="#">EJB</a>
+									</li>
+									<li>
+										<a href="#">Jasper Report</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a href="#">分离的链接</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a href="#">另一个分离的链接</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<form class="navbar-form navbar-right" role="search">
+							<button type="submit" class="btn btn-default">
+                                                                                  向右对齐-提交按钮
+                            </button>
+						</form>
+						<p class="navbar-text navbar-right">向右对齐-文本</p>
+					</div>
+				</div>
+			</nav>
+			<br /><br /><br />
+			<!--<div style="height: 1000px;"></div>-->
+
+			<!--
+				固定到顶部：
+				  Bootstrap 导航栏可以动态定位。默认情况下，它是块级元素，
+				     它是基于在 HTML 中放置的位置定位的。通过一些帮助器类，
+				     您可以把它放置在页面的顶部或者底部，
+				     或者您可以让它成为随着页面一起滚动的静态导航栏。
+                                             如果您想要让导航栏固定在页面的顶部，
+                                             请向 .navbar class 添加 class .navbar-fixed-top/bottom
+                                      【注】：        
+                                                   为了防止导航栏与页面主体中的其他内容的顶部相交错，
+                                                   请向 <body> 标签添加至少 50 像素的内边距（padding），
+                                                   内边距的值可以根据您的需要进行设置。                    
+			-->
+			<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+				<div class="container-fluid"></div>
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">放到底部</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a href="#">标签1</a>
+					</li>
+					<li>
+						<a href="#">标签2</a>
+					</li>
+					<li>
+						<a href="#">标签3</a>
+					</li>
+					<li>
+						<a href="#">标签4</a>
+					</li>
+				</ul>
+			</nav>
+			<br /><br /><br />
+
+			<!--
+				静态的顶部:
+				   如需创建能随着页面一起滚动的导航栏，
+				   请添加 .navbar-static-top class。
+				   该 class 不要求向 <body> 添加内边距（padding）。
+			-->
+			<nav class="navbar navbar-default navbar-static-top" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">静态的顶部</a>
+					</div>
+					<div>
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="#">iOS</a>
+							</li>
+							<li>
+								<a href="#">SVN</a>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									Java <b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">jmeter</a>
+									</li>
+									<li>
+										<a href="#">EJB</a>
+									</li>
+									<li>
+										<a href="#">Jasper Report</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a href="#">分离的链接</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a href="#">另一个分离的链接</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<br /><br /><br />
+			
+			<!--
+				反色的导航栏：
+				    为了创建一个带有黑色背景白色文本的反色的导航栏，
+				    只需要简单地向 .navbar class 添加 .navbar-inverse class 即可
+			-->
+			<nav class="navbar navbar-inverse" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a href="#" class="navbar-brand">黑色底的导航栏</a>
+					</div>
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#">语言1</a>
+						</li>
+						<li>
+							<a href="#">语言2</a>
+						</li>
+						<li>
+							<a href="#">语言3</a>
+						</li>
+						<li>
+							<a href="#">语言4</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<br /><br /><br />
+			
+			<!--
+				面包屑导航（Breadcrumbs）：
+				   1、面包屑导航（Breadcrumbs）是一种基于网站层次信息的显示方式。
+				             以博客为例，面包屑导航可以显示发布日期、类别或标签。
+				             它们表示当前页面在导航层次结构内的位置。
+				   2、是一个简单的带有 .breadcrumb class 的无序列表。
+			-->
+			<ul class="breadcrumb">
+				<li><a href=":;">Home</a></li>
+				<li><a href=":;">2017</a></li>
+				<li class="active"><a href=":;">五月</a></li>
+				<li><a href="Javascript:void(0)">劳动节</a></li>
+			</ul>
+			<br /><br /><br /><br /><br />
+		</div>
+	</body>
+
+</html>

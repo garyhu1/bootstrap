@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap 实例 - 警告（Alerts）</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<p class="alert alert-info">信息！请查收这个信息</p>
+			<p class="alert alert-success">成功！不断的努力</p>
+			<p class="alert alert-warning">警告！注意周围环境</p>
+			<p class="alert alert-danger">危险！不要再靠近</p>
+			<br /><br /><br />
+			
+			
+			<!--
+				可取消的警告：
+				   1、通过创建一个 <div>，并向其添加一个 .alert class 和四个上下文 class
+				   	（即 .alert-success、.alert-info、.alert-warning、.alert-danger）之一，
+				   	来添加一个基本的警告框。
+                   2、同时向上面的 <div> class 添加可选的 .alert-dismissable。
+                   3、添加一个关闭按钮。
+			-->
+			<div class="alert alert-info alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				信息！请查收这个信息
+			</div>
+			<div class="alert alert-success alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				成功！不断的努力
+			</div>
+			<div class="alert alert-warning alert-dismissable">
+				警告！注意周围环境
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			</div>
+			<div class="alert alert-danger alert-dismissable">
+				危险！不要再靠近
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true" >&times;</button>
+			</div>
+			
+			<br /><br /><br />
+			
+			
+			<!--
+				警告（Alerts）中的链接:
+				    1、通过创建一个 <div>，并向其添加一个 .alert class 和四个上下文 class
+				              （即 .alert-success、.alert-info、.alert-warning、.alert-danger）之一，
+				               来添加一个基本的警告框。
+                2、使用 .alert-link 实体类来快速提供带有匹配颜色的链接。
+			-->
+			<div class="alert alert-success">
+				<a href="javascript:void(0)" class="alert-link">成功！不断的努力</a>
+			</div>
+		</div>
+	</body>
+</html>

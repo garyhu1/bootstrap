@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap 实例 - 标签与徽章</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<style type="text/css">
+			.badge {
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<span class="label label-default">默认标签</span>
+			<span class="label label-primary">原始标签</span>
+			<span class="label label-success">成功标签</span>
+			<span class="label label-warning">警告标签</span>
+			<span class="label label-danger">危险标签</span>
+			<br /><br /><br /><br />
+			
+			
+			<!--
+				徽章（Badges）：
+				     主要用于突出显示新的或未读的项。
+				     如需使用徽章，只需要把 <span class="badge"> 添加到链接
+			-->
+			<a href="javascript:void(0)">Mark   <span class="badge">20</span></a><br /><br />
+			<a href="javascript:void(0)">未读信息   <span class="badge">36</span></a>
+			<br /><br /><br />
+			
+			<ul class="nav nav-pills">
+				<li class="active">
+					<a href="javascript:void(0)">首页 <span class="badge">18</span></a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">简介 </a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">消息 <span class="badge">31</span></a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

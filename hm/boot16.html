@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap 实例 - 分页</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<style type="text/css">
+			.container {
+				background: navajowhite;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			分页:
+			  .pager	一个简单的分页链接，链接居中对齐。	
+              .previous	.pager 中上一页的按钮样式，左对齐	
+              .next	.pager 中下一页的按钮样式，右对齐	
+              .disabled	禁用链接	
+              .pagination	分页链接	
+              .pagination-lg	更大尺寸的分页链接	
+              .pagination-sm	更小尺寸的分页链接	
+              .disabled	禁用链接	
+              .active	当前访问页面链接样式
+		-->
+		<div class="container">
+			<ul class="pagination pagination-lg">
+				<li>
+					<a href="javascript:void(0)">&laquo;</a>
+				</li>
+				<li class="active">
+					<a href="javascript:void(0)">1</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">2</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">3</a>
+				</li>
+				<li class="disabled">
+					<a href="javascript:void(0)">4</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">5</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">&raquo;</a>
+				</li>
+			</ul>
+			<br /><br />
+			<ul class="pagination">
+				<li>
+					<a href="javascript:void(0)">&laquo;</a>
+				</li>
+				<li class="active">
+					<a href="javascript:void(0)">1</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">2</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">3</a>
+				</li>
+				<li class="disabled">
+					<a href="javascript:void(0)">4</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">5</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">&raquo;</a>
+				</li>
+			</ul>
+			<br /><br />
+			<ul class="pagination pagination-sm">
+				<li>
+					<a href="javascript:void(0)">&laquo;</a>
+				</li>
+				<li class="active">
+					<a href="javascript:void(0)">1</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">2</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">3</a>
+				</li>
+				<li class="disabled">
+					<a href="javascript:void(0)">4</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">5</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">&raquo;</a>
+				</li>
+			</ul>
+			<br /><br />
+			
+			<ul class="pager">
+				<li>
+					<a href="javascript:void(0)">previous</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">next</a>
+				</li>
+			</ul>
+			<br /><br />
+			
+			<ul class="pager">
+				<li class="previous">
+					<a href="javascript:void(0)">&larr; Older</a>
+				</li>
+				<li class="next">
+					<a href="javascript:void(0)">Newer &rarr;</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap 实例 - 输入框组</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!--
+				向 .form-control 添加前缀或后缀元素的步骤如下：
+				  1、把前缀或后缀元素放在一个带有 class .input-group 的 <div> 中。
+                  2、接着，在相同的 <div> 内，在 class 为 .input-group-addon 的 <span> 内放置额外的内容。
+                  3、把该 <span> 放置在 <input> 元素的前面或者后面。
+			-->
+			<div class="input-group">
+				<span class="input-group-addon">@</span>
+				<input type="text" class="form-control" placeholder="请输入内容"/>
+			</div>
+			<br />
+			<div class="input-group input-group-lg">
+				<input type="text" class="form-control"  />
+				<span class="input-group-addon">大一点的</span>
+			</div>
+			<br />
+			<div class="input-group" >
+				<span class="input-group-addon">姓名:</span>
+				<input type="text" class="form-control" placeholder="请输入姓名"/>
+			</div>
+			<br />
+			<div class="input-group input-group-sm">
+				<input type="text" class="form-control" />
+				<span class="input-group-addon">小一点的</span>
+			</div>
+			<br /><br />
+			
+			<!--
+				把复选框和单选插件作为输入框组的前缀或者后缀元素
+			-->
+			<div class="input-group">
+				<span class="input-group-addon"><input type="radio"/></span>
+				<input type="text" class="form-control" />
+			</div>
+			<br />
+			<div class="input-group">
+				<span class="input-group-addon"><input type="checkbox"/></span>
+				<input type="text" class="form-control" />
+			</div>
+			<br /><br /><br />
+			
+			
+			<!--
+				可以把按钮作为输入框组的前缀或者后缀元素:
+				    这个时候您就不是添加 .input-group-addon class，
+				    您需要使用 class .input-group-btn 来包裹按钮。
+				    这是必需的，因为默认的浏览器样式不会被重写
+			-->
+			<div class="input-group">
+				<span class="input-group-btn">
+					<button type="button" class="btn btn-primary">sure</button>
+				</span>
+				<input type="text" class="form-control" />
+			</div>
+			<br /><br /><br />
+			
+			
+			<!--
+				在输入框组中添加带有下拉菜单的按钮:
+				   只需要简单地在一个 .input-group-btn class 中包裹按钮和下拉菜单即可
+			-->
+			<form role="form">
+				<div class="input-group">
+					<div class="input-group-btn">
+						<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+							下拉菜单
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="#">查询功能</a></li>
+							<li><a href="#">点击功能</a></li>
+							<li><a href="#">其他选项</a></li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">被分离的项</a>
+							</li>
+						</ul>
+					</div>
+					<input type="text" class="form-control" />
+				</div>
+				<br /><br />
+				<div class="input-group">
+					<div class="input-group-btn">
+						<button type="button" class="btn btn-warning">下拉菜单</button>
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle = "dropdown">
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="#">查询功能</a></li>
+							<li><a href="#">点击功能</a></li>
+							<li><a href="#">其他选项</a></li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">被分离的项</a>
+							</li>
+						</ul>
+					</div>
+					<input type="text" class="form-control" />
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
