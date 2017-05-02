@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap 提示工具（Tooltip）插件</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+	</head>
+	<!--
+		用法：
+		通过 data 属性：如需添加一个提示工具（tooltip），
+		只需向一个锚标签添加 data-toggle="tooltip" 即可。
+		锚的 title 即为提示工具（tooltip）的文本。
+		默认情况下，插件把提示工具（tooltip）设置在顶部。
+	-->
+	<!--
+		注意：
+		提示工具（Tooltip）插件不像之前所讨论的下拉菜单及其他插件那样，
+		它不是纯 CSS 插件。如需使用该插件，您必须使用 jquery 激活它（读取 javascript）。
+		使用下面的脚本来启用页面中的所有的提示工具（tooltip）：
+        $(function () { $("[data-toggle='tooltip']").tooltip(); });
+	-->
+	<body>
+		<div class="container">
+			<ul class="list-unstyled">
+				<li>
+					<a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title="左边的提示内容">左边</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="上边的提示内容">上边</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)" data-toggle="tooltip" data-placement="right" title="右边的提示内容">右边</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" title="下边的提示内容">下边</a>
+				</li>
+			</ul>
+			<button class="btn btn-default" data-toggle="tooltip" data-placement="left" title="左边的提示内容">左边显示提示</button>
+			<button class="btn btn-default" data-toggle="tooltip" data-placement="top" title="上边的提示内容">上边显示提示</button>
+			<button class="btn btn-default" data-toggle="tooltip" data-placement="right" title="右边的提示内容">右边显示提示</button>
+			<button class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="下边的提示内容">下边显示提示</button>
+		</div>
+		<!--
+			选项：
+			animation----》boolean 默认值 true	，data-animation ，提示工具使用 CSS 渐变滤镜效果。
+            html----》boolean默认值false，data-html，向提示工具插入 HTML。
+                                                     如果为 false，jQuery 的 text 方法将被用于向 dom 插入内容。 
+                                                     如果您担心 XSS 攻击，请使用 text。
+            placement----》string|function默认值top，data-placement，规定如何定位提示工具（即 top|bottom|left|right|auto）。
+                                                                    当指定为 auto 时，会动态调整提示工具。例如，如果 placement 是 "auto left"，
+                                                                    提示工具将会尽可能显示在左边，在情况不允许的情况下它才会显示在右边。
+            selector----》string默认值false，data-selector，如果提供了一个选择器，提示工具对象将被委派到指定的目标。
+            title----》string | function默认值：''，data-title，如果未指定 title 属性，则 title 选项是默认的 title 值。
+            trigger----》string默认值'hover focus'，data-trigger，定义如何触发提示工具：
+                         click| hover | focus | manual。
+                                                              您可以传递多个触发器，每个触发器之间用空格分隔。
+            content----》string | function默认值：''，data-content，如果未指定 data-content 属性，则使用默认的 content 值。
+            delay----》number | object默认值：0，data-delay，延迟显示和隐藏提示工具的毫秒数 - 对 manual 手动触发类型不适用。
+                                                        如果提供的是一个数字，那么延迟将会应用于显示和隐藏。如果提供的是对象，结构如下所示：
+                       delay:
+                            { show: 500, hide: 100 }
+            container----》string | false默认值：false	，data-container	，向指定元素追加提示工具。
+                                                                   实例： container: 'body'
+		-->
+		<!--
+			方法：
+			1、Options: .tooltip(options)	向元素集合附加提示工具句柄。	
+                        $().tooltip(options)
+            2、Toggle: .tooltip('toggle')	切换显示/隐藏元素的提示工具。	
+                       $('#element').tooltip('toggle')
+            3、Show: .tooltip('show')	显示元素的提示工具。	
+                     $('#element').tooltip('show')
+            4、Hide: .tooltip('hide')	隐藏元素的提示工具。	
+                     $('#element').tooltip('hide')
+            5、Destroy: .tooltip('destroy')	隐藏并销毁元素的提示工具。	
+                        $('#element').tooltip('destroy')
+		-->
+	</body>
+	<script>
+		$(function(){
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+		/*
+		 * show.bs.tooltip	当调用 show 实例方法时立即触发该事件。	
+         * shown.bs.tooltip	当提示工具对用户可见时触发该事件（将等待 CSS 过渡效果完成）。	
+         * hide.bs.tooltip	当调用 hide 实例方法时立即触发该事件。	
+         * hidden.bs.tooltip	当提示工具对用户隐藏时触发该事件（将等待 CSS 过渡效果完成）。
+		 */
+	</script>
+</html>
